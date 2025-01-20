@@ -1,0 +1,15 @@
+.hero-bg {
+  background-image: url("../../../public/HeroBlocks.png");
+  background-size: cover;
+  background-position: center;
+}
+.joinClub-bg {
+  background-image: url("../../../public/joinBenefits.png");
+  background-size: cover;
+  background-position: center;
+}
+.custom-bg {
+  background-image: url("../../../public/AllProductbg.png");
+  background-size: cover;
+  background-position: center;
+}
