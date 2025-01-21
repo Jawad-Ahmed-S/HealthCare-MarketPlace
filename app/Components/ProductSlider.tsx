@@ -11,14 +11,21 @@ const builder = imageUrlBuilder(client);
 function urlFor(source: any) {
   return builder.image(source);
 }
+type CategoryListingProps = {
+  searchQuery: string; // Accept the search query as a prop
+  category: string; // Accept the category as a prop
+};
 
-export default function ProductSlider() {
+export default function ProductSlider({ searchQuery, category }: CategoryListingProps) {
+  const [productData, setProductData] = useState<Productinterface[]>([]);
+  const [filteredProducts, setFilteredProducts] = useState<Productinterface[]>([]);
+{
   const [productData, setProductData] = useState<Productinterface[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const data = await client.fetch(`
-        *[_type == "Product"] [4..7] {
+        *[_type == "Product"] [0..3] {
           poster,
           productname,
           price,
@@ -34,18 +41,18 @@ export default function ProductSlider() {
       setProductData(data);
 
       // Log the IDs after fetching
-      console.log("Fetched Product IDs:", data.map((item: any) => item.id));
+      // console.log("Fetched Product IDs:", data.map((item: any) => item.id));
+      console.log(data)
     };
     fetchData();
   }, []);
-
   return (
     <section className="max-w-[1440px] flex justify-center items-center mt-[5rem] mb-[5rem] px-4 overflow-x-hidden">
       <div className="w-full flex flex-col justify-center items-center">
         <div className="flex flex-col gap-4 w-full justify-evenly md:flex-row md:items-center overflow-x-auto">
           {productData.map((tile, index) => {
             // Log each product ID during rendering
-            console.log("Rendering Product ID:", tile.id);
+            // console.log("Rendering Product ID:", tile.id);
             return (
               <ProductCard
                 key={tile.id}
@@ -61,4 +68,5 @@ export default function ProductSlider() {
       </div>
     </section>
   );
+}
 }

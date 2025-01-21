@@ -4,7 +4,13 @@ import Link from "next/link";
 import { UserIcon, CartIcon, SearchIcon } from "./icons";
 
 
-export default function Header() {
+export default function Header({ onSearch }: { onSearch: (searchQuery: string) => void }) {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
+    onSearch(e.target.value); // Pass the search query to parent
+  };
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,34 +19,37 @@ export default function Header() {
 
   return (
     <div className="bg-white">
-      {/* Top Header Section */}
       <div className="flex justify-between items-center px-4 lg:ml-8 lg:mr-8">
-        {/* Hamburger Icon (Mobile) */}
+
+        {/* Search Icon */}
+        {/* Logo (Centered for Desktop and Mobile) */}
+        <Link href="/"><h1 className="headline-two font-title text-custom-purple-dark mx-auto">Avion</h1></Link>
         <div className="lg:hidden cursor-pointer" onClick={toggleMenu}>
           <div className="w-6 h-0.5 bg-custom-purple-dark mb-1"></div>
           <div className="w-6 h-0.5 bg-custom-purple-dark mb-1"></div>
           <div className="w-6 h-0.5 bg-custom-purple-dark"></div>
         </div>
-
-        {/* Search Icon */}
-        {/* Logo (Centered for Desktop and Mobile) */}
-        <Link href="/"><h1 className="headline-two font-title text-custom-purple-dark mx-auto">Avion</h1></Link>
-        <div className="lg:hidden">
-          <SearchIcon />
-        </div>
+          
+        
 
       
         <div className="hidden lg:flex gap-4">
           <Link href="/Cart" className="hover:bg-custom-gray-medium p-2"><CartIcon /></Link>
           <Link href="/About" className="hover:bg-custom-gray-medium p-2"><UserIcon /></Link>
+           <input
+        type="text"
+        value={searchQuery}
+        onChange={handleSearchChange}
+        placeholder="Search for products..."
+        className="search-bar"
+      />
+          <Link href="/AllProduct" className="hover:bg-custom-gray-medium p-2"><SearchIcon /></Link>
           <Link href="/About" className="hover:bg-custom-gray-medium p-2">Admin Login</Link>
         </div>
       </div>
 
-      {/* Divider */}
       <hr />
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <div className="lg:hidden absolute  left-0 w-full bg-white shadow-md z-10">
           <ul className="flex flex-col gap-4 p-4">
@@ -81,7 +90,9 @@ export default function Header() {
             </li>
             <li>
               <div className="flex"><Link href="/Cart" className="hover:bg-custom-gray-medium p-2"><CartIcon /></Link>
-          <Link href="/About" className="hover:bg-custom-gray-medium p-2"><UserIcon /></Link></div></li>
+          <Link href="/About" className="hover:bg-custom-gray-medium p-2"><UserIcon /></Link>
+          <Link href="/AllProduct" className="hover:bg-custom-gray-medium p-2"><SearchIcon /></Link></div>
+          </li>
           <li><Link href="/About" className="hover:bg-custom-gray-medium p-2">Admin Login</Link>
         </li>
           </ul>

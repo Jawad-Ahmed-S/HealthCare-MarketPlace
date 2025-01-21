@@ -1,0 +1,112 @@
+[
+  {
+    "poster_url": "https://images.pexels.com/photos/3952048/pexels-photo-3952048.jpeg",
+    "productname": "Wooden Dining Table",
+    "category": "Tables",
+    "price": 350,
+    "description": "A premium-quality wooden dining table with a smooth finish.",
+    "height": 75,
+    "width": 120,
+    "depth": 90,
+    "id": "1"
+  },
+  {
+    "poster_url": "https://images.pexels.com/photos/18252853/pexels-photo-18252853/free-photo-of-sofa-in-a-living-room.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "productname": "Leather Sofa",
+    "category": "Chairs",
+    "price": 899,
+    "description": "A luxurious leather sofa with a modern design, perfect for living rooms.",
+    "height": 85,
+    "width": 200,
+    "depth": 90,
+    "id": "2"
+  },
+  {
+    "poster_url": "https://images.pexels.com/photos/1813466/pexels-photo-1813466.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "productname": "Coffee Table",
+    "category": "Tables",
+    "price": 150,
+    "description": "A sleek and stylish coffee table made of tempered glass.",
+    "height": 45,
+    "width": 100,
+    "depth": 50,
+    "id": "3"
+  },
+  {
+    "poster_url": "https://images.pexels.com/photos/1125130/pexels-photo-1125130.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "productname": "Bookshelf",
+    "category": "Tables",
+    "price": 240,
+    "description": "A spacious wooden bookshelf with multiple compartments.",
+    "height": 180,
+    "width": 80,
+    "depth": 30,
+    "id": "4"
+  },
+  {
+    "poster_url": "https://images.pexels.com/photos/1957478/pexels-photo-1957478.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "productname": "Office Chair",
+    "category": "Chairs",
+    "price": 120,
+    "description": "An ergonomic office chair with adjustable height and lumbar support.",
+    "height": 120,
+    "width": 60,
+    "depth": 60,
+    "id": "5"
+  },
+  {
+    "poster_url": "https://images.pexels.com/photos/21345931/pexels-photo-21345931/free-photo-of-big-bed-in-a-bathroom.png?auto=compress&cs=tinysrgb&w=600",
+    "productname": "King Size Bed",
+    "category": "Tables",
+    "price": 1200,
+    "description": "A comfortable king-size bed with a durable wooden frame.",
+    "height": 70,
+    "width": 200,
+    "depth": 180,
+    "id": "6"
+  },
+  {
+    "poster_url": "https://images.pexels.com/photos/9291574/pexels-photo-9291574.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "productname": "Recliner Chair",
+    "category": "Chairs",
+    "price": 350,
+    "description": "A plush recliner chair with multiple reclining positions.",
+    "height": 110,
+    "width": 90,
+    "depth": 100,
+    "id": "7"
+  },
+  {
+    "poster_url": "https://images.pexels.com/photos/3315286/pexels-photo-3315286.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "productname": "Modern Wardrobe",
+    "category": "Tables",
+    "price": 800,
+    "description": "A spacious wardrobe with sliding doors and a sleek modern design.",
+    "height": 200,
+    "width": 150,
+    "depth": 60,
+    "id": "8"
+  },
+  {
+    "poster_url": "https://images.pexels.com/photos/116910/pexels-photo-116910.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "productname": "Wooden Chair Set",
+    "category": "Chairs",
+    "price": 180,
+    "description": "A set of 4 finely crafted wooden chairs, perfect for dining rooms.",
+    "height": 90,
+    "width": 50,
+    "depth": 50,
+    "id": "9"
+  },
+  {
+    "poster_url": "https://images.pexels.com/photos/2082092/pexels-photo-2082092.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "productname": "Side Table",
+    "category": "Tables",
+    "price": 70,
+    "description": "A compact side table with a minimalist design for bedrooms.",
+    "height": 50,
+    "width": 40,
+    "depth": 40,
+    "id": "10"
+  }
+]

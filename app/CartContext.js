@@ -21,7 +21,6 @@ export const CartProvider = ({ children }) => {
           : item
       );
     } else {
-      // If the product doesn't exist, add it with quantity 1
       return [...prevItems, { ...product, quantity: 1 }];
     }
   });

@@ -19,12 +19,12 @@ type Params = { id: string };
 type PageProps = {
   params: Params;
 };
-
 export default async function ProductListing({ params }: PageProps) {
-  const prodIndex = parseInt(params.id, 10);
+  const prodIndex = params.id;
 
+  // Fetch the product data from Sanity
   const res = await client.fetch(`
-    *[_type == "Product"] {
+    *[_type == "Product" && id == "${prodIndex}"] {
       poster,
       productname,
       price,
@@ -33,10 +33,18 @@ export default async function ProductListing({ params }: PageProps) {
         height,
         width,
         depth
-      }
+      },
+      id
     }
   `);
-  const product = res[prodIndex];
+
+  // Extract the first product from the array
+  const product = res[0];
+
+  if (!product) {
+    // Handle the case where no product is found
+    return <div>Product not found.</div>;
+  }
 
   return (
     <div className="bg-white h-full max-w-[1440px] sm:-w-[400px] m-auto">
@@ -45,9 +53,9 @@ export default async function ProductListing({ params }: PageProps) {
         id={product.id}
         poster={urlFor(product.poster).url()}
         productname={product.productname}
-        Price={product.price}   
+        Price={product.price}
         description={product.description}
-        Dimensions={product.dimensions}  
+        Dimensions={product.dimensions}
       />
       <h1 className="headline-three m-[5rem] text-custom-purple-dark">You May Also Like</h1>
       <ProductSlider />
