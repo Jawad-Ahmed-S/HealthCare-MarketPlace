@@ -1,0 +1,13 @@
+Test Case ID,Test Case Description,Test Steps,Expected Result,Actual Result,Status,Severity Level,Remarks
+TC001,Static Components loading,Open Websites > Verify components,Components load properly,Working fine,Passed,Low,No issues found
+TC002,Product Data Rendering,Navigate to product page > Verify data,Product data renders correctly,Fine,Passed,Medium,No issues found
+TC003,Cart Functionality,Add product to cart > Verify cart,Cart updates correctly,Fine,Passed,High,Works as expected
+TC004,Responsiveness,Resize browser > Check layout,Layout adjusts to screen size,OK,Passed,Medium,Responsive design functional
+TC005,Search Functionality,Search for product > Verify results,Relevant products are displayed,Fine,Passed,High,Search working correctly
+TC006,Details Pages,Open product details > Verify content,Details are displayed accurately,Fine,Passed,Medium,All details load properly
+TC007,Quantity update in the cart,Update product quantity in cart > Verify update,Quantity updates successfully,Fine,Passed,High,No issues found
+TC008,Categories of products,Navigate through categories > Verify listings,Correct products displayed in categories,Fine,Passed,Medium,Categories working properly
+TC009,Checkout Form,Fill checkout form > Submit,Form submits successfully,Fine,Passed,High,Works as expected
+TC010,Live Location (Ambulance),Access live location feature,Live location displays accurately,Will be added,Pending,Critical,Feature under development
+TC011,Payment Gateway,Initiate payment > Verify response,Payment processed successfully,Will be added,Pending,Critical,Integration pending
+TC012,Admin Dashboard,Access admin panel > Verify features,Admin dashboard functional,Will be added,Pending,High,Feature under development
