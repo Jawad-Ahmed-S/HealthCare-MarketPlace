@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const ButtonGray = ({ className, children,event}) => {
+export const ButtonGray = ({ className, children}) => {
   return (
-    <button style={{ backgroundColor: '#F9F9F9',color:'#4E4D93' }} onClick={event} className={` hover:opacity-80  w-[6.5rem] h-[3rem] ${className}`}>
+    <button style={{ backgroundColor: '#F9F9F9',color:'#4E4D93' }}  className={` hover:opacity-80  w-[6.5rem] h-[3rem] ${className}`}>
       {children}
     </button>
   );

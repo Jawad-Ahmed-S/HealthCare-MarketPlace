@@ -11,14 +11,14 @@ const builder = imageUrlBuilder(client);
 function urlFor(source: any) {
   return builder.image(source);
 }
-type CategoryListingProps = {
-  searchQuery: string; // Accept the search query as a prop
-  category: string; // Accept the category as a prop
-};
+// type CategoryListingProps = {
+//   searchQuery: string; // Accept the search query as a prop
+//   category: string; // Accept the category as a prop
+// };
 
-export default function ProductSlider({ searchQuery, category }: CategoryListingProps) {
-  const [productData, setProductData] = useState<Productinterface[]>([]);
-  const [filteredProducts, setFilteredProducts] = useState<Productinterface[]>([]);
+export default function ProductSlider() {
+  // const [productData, setProductData] = useState<Productinterface[]>([]);
+  // const [filteredProducts, setFilteredProducts] = useState<Productinterface[]>([]);
 {
   const [productData, setProductData] = useState<Productinterface[]>([]);
 
