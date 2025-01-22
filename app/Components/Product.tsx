@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 interface ProductCardProps {
   imagePath: string;
   title: string;
@@ -14,9 +14,14 @@ export default function ProductCard({ imagePath, title, price, id }: ProductCard
 
   return (
     <Link href={`/${id}` || '#'}>
-      <div className="bg-white md:w-[17rem] w-[100%]">
-        <img src={imagePath} alt={title} className="w-full object-cover h-[25rem]" />
-        <div className="pt-4 pb-4">
+      <div className="bg-white relative md:w-[17rem] h-[65vh] w-[100%]">
+       <Image
+        src={imagePath}
+        alt={title}
+        layout="fill"
+        objectFit="cover" 
+      />
+      <div className="pt-4 pb-4">
           <h2 className="text-custom-purple-dark text-bold headline-five mb-[1px]">{title}</h2>
           <p className="text-custom-purple-dark headline-five">{price}</p>
         </div>

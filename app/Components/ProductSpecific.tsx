@@ -11,13 +11,13 @@ export default function ProductSpecific(props:ProductSchemaType){
   };
 
 return(
-    <section className="  flex flex-col justify-between mb-[5rem] h-[100vh] items-center md:flex-row">
-        <div className="  md:w-[50%] w-[100%] h-[100%] overflow-hidden">
-            <Image className=" w-[100%] " src={props.poster} 
-        width={800}
-        height={600}                   
+    <section className="  flex flex-col justify-between mb-[5rem] min-h-[100vh] items-center md:flex-row">
+        <div className="  md:w-[50%] w-[100%] md:h-[100vh] min-h-[80vh] overflow-hidden">
+            <Image className=" w-[100%] h-auto" src={props.poster} 
+        width={600}
+        height={900}                   
         quality={90}                   
-        layout="intrinsic" alt={`456`}/>
+         alt={`456`}/>
         </div>
     <div className="  flex flex-col md:w-[55%] w-[90%]  justify-center gap-10 p-8">
 

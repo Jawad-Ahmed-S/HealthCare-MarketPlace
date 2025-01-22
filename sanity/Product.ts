@@ -7,6 +7,9 @@ const ProductSchemas = {
       title: 'Poster',
       name: 'poster',
       type: 'image', 
+      options: {
+      hotspot: true,
+      },
       validation: (Rule) => Rule.required().uri({
       allowRelative: false,
       scheme: ['http', 'https']
