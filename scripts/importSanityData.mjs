@@ -66,11 +66,7 @@ async function importData() {
               },
             }
           : undefined,
-        dimensions: {
-          height: product.height, // Directly using top-level height
-          width: product.width,  // Directly using top-level width
-          depth: product.depth,  // Directly using top-level depth
-        },
+        packet_size:product.packet_size,
         id:product.id
       }
 

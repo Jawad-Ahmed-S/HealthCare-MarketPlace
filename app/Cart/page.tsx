@@ -9,14 +9,14 @@ import FormCheckout from "../Components/formCheckout";
 
 const Cart = () => {
   const { cartItems } = useCart();
-  const [showForm, setShowForm] = useState(false); // State to toggle form visibility
-
+  const [showForm, setShowForm] = useState(false); 
+  const [CartQuantity,setCartQuantity]= useState(1)
   const subtotal = Array.isArray(cartItems)
-    ? cartItems.reduce((total: number, item) => total + (item.Price * item.quantity), 0)
+    ? cartItems.reduce((total: number, item) => total + (item.Price * CartQuantity), 0)
     : 0;
 
   const handleCheckoutClick = () => {
-    setShowForm(true); // Display the form when the button is clicked
+    setShowForm(true); 
   };
 
   return (
@@ -54,13 +54,13 @@ const Cart = () => {
                 </div>
 
                 <div className="col-span-3 flex justify-center items-center gap-2">
-                  <button className="w-8 h-8 border border-gray-300">-</button>
-                  <span>{item.quantity}</span>
-                  <button className="w-8 h-8 border border-gray-300">+</button>
+                  <button className="w-8 h-8 border border-gray-300" onClick={()=>{setCartQuantity((CartQuantity>1)?CartQuantity-1:CartQuantity)}}>-</button>
+                  <span>{CartQuantity}</span>
+                  <button className="w-8 h-8 border border-gray-300" onClick={()=>{setCartQuantity(CartQuantity+1)}}>+</button>
                 </div>
 
                 <div className="col-span-3 text-right font-semibold">
-                  £{item.Price * (item.quantity || 1)}
+                  £{item.Price * (CartQuantity || 1)}
                 </div>
               </div>
             ))

@@ -3,11 +3,12 @@ import Image from "next/image"
 import ProductSchemaType from "./Productinterface";
 
 import { useCart } from "../CartContext";
+import { useState } from "react";
 export default function ProductSpecific(props:ProductSchemaType){
    const {addToCart} = useCart(); 
-
+  const [localQuantity,setlocalQuantity]=useState(1)
   const handleAddToCart = () => {
-    addToCart(props); 
+    addToCart(props,localQuantity); 
   };
 
 return(
@@ -34,13 +35,7 @@ return(
           </h2>
           <ul className="  list-none flex gap-[2rem] mt-[2rem] text-custom-purple-dark">
             <li className="  flex flex-col">
-              <span className="  font-semibold">Height</span> <span>{props.Dimensions.height}cm</span>
-            </li>
-            <li className="  flex flex-col">
-              <span className="  font-semibold">Width</span> <span>{props.Dimensions.width}cm</span>
-            </li>
-            <li className="  flex flex-col">
-              <span className="   font-semibold">Depth</span><span>{props.Dimensions.depth}cm</span>
+              <span className="  font-semibold">Packet Size</span> <span>{props.packet_size}</span>
             </li>
           </ul>
         </div>
@@ -49,16 +44,16 @@ return(
       <div className="  flex flex-row justify-between items-center gap-4">
 
         <div className="  flex items-center ">
-          <button className=" p-2 bg-gray-300 hover:bg-gray-400 text-custom-purple-dark ">
+          <button onClick={()=>{setlocalQuantity(localQuantity-1)}} className=" p-2 bg-gray-300 hover:bg-gray-400 text-custom-purple-dark ">
             -
           </button>
           <input
             type="text"
-            value="1"
+            value={localQuantity}
             readOnly
             className=" p-2 w-10 text-center bg-gray-300  "
           />
-          <button className=" p-2 bg-gray-300 hover:bg-gray-400 text-custom-purple-dark  ">
+          <button onClick={()=>{setlocalQuantity(localQuantity+1)}} className=" p-2 bg-gray-300 hover:bg-gray-400 text-custom-purple-dark  ">
             +
           </button>
         </div>

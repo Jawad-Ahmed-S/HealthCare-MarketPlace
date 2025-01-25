@@ -20,13 +20,12 @@ export default function Header({ onSearch }: { onSearch?: (query: string) => voi
   };
 
   const navLinks = [
-    { href: "/category/Plant", label: "Plant Pots" },
-    { href: "/category/Ceramics", label: "Ceramics" },
-    { href: "/category/Tables", label: "Tables" },
-    { href: "/category/Chairs", label: "Chairs" },
-    { href: "/category/Crockery", label: "Crockery" },
-    { href: "/category/Tableware", label: "Tableware" },
-    { href: "/category/Cutlery", label: "Cutlery" },
+    { href: "/category/Tablets", label: "Tablets" },
+    { href: "/category/Syrups", label: "Syrups" },
+    { href: "/category/Injections", label: "Injections" },
+    { href: "/category/Equipment", label: "Equipment" },
+    { href: "/category/Kits", label: "Kits" },
+    { href: "/category/Ambulance", label: "Ambulance" },
   ];
 
   const renderLinks = (additionalClasses = "") =>
@@ -49,12 +48,6 @@ export default function Header({ onSearch }: { onSearch?: (query: string) => voi
           <div className="w-6 h-0.5 bg-custom-purple-dark"></div>
         </div>
         <div className="hidden lg:flex gap-4 items-center">
-          <Link href="/Cart" className="hover:bg-custom-gray-medium p-2">
-            <CartIcon />
-          </Link>
-          <Link href="/About" className="hover:bg-custom-gray-medium p-2">
-            <UserIcon />
-          </Link>
           <input
             type="text"
             value={search}
@@ -67,6 +60,12 @@ export default function Header({ onSearch }: { onSearch?: (query: string) => voi
           </button>
           <Link href="/About" className="hover:bg-custom-gray-medium p-2">
             Admin
+          </Link>
+          <Link href="/About" className="hover:bg-custom-gray-medium p-2">
+            <UserIcon />
+          </Link>
+          <Link href="/Cart" className="hover:bg-custom-gray-medium p-2">
+            <CartIcon />
           </Link>
         </div>
       </div>
@@ -85,14 +84,22 @@ export default function Header({ onSearch }: { onSearch?: (query: string) => voi
               <Link href="/About" className="hover:bg-custom-gray-medium p-2">
                 <UserIcon />
               </Link>
+               <Link href="/About" className="hover:bg-custom-gray-medium p-2">
+                Admin
+              </Link>
+            </li>
+            <li>
+               <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search for products..."
+            className="search-bar pl-3"
+          />
               <button onClick={handleSearchClick} className="hover:bg-custom-gray-medium p-2">
                 <SearchIcon />
               </button>
-            </li>
-            <li>
-              <Link href="/About" className="hover:bg-custom-gray-medium p-2">
-                Admin
-              </Link>
+             
             </li>
           </ul>
         </div>

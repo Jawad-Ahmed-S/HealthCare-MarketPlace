@@ -4,9 +4,7 @@ interface ProductSchemaType {
   productname: string;
   Price: number;
   description: string;
-  Dimensions: { height: number,
-                width: number,
-                depth: number};
+  packet_size:string,
   id:number;
 }
 export default ProductSchemaType;

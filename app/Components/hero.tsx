@@ -10,16 +10,16 @@ export default function Hero() {
           <div className="m-[3rem] flex flex-col justify-between">
             <div>
               <h1 className="headline-two text-custom-purple-dark">
-                Luxury homeware for people who love timeless design quality
+                Revolutionizing healthcare  <br /> with trusted products and reliable services
               </h1>
               <p
                 style={{ color: "#4E4D93" }}
                 className="headline-six text-custom-purple-dark mt-2"
               >
-                Shop the new Spring 2022 collection today
+                Explore our marketplace for all your medical needs
               </p>
             </div>
-            <ButtonGray className="">Button</ButtonGray>
+            <ButtonGray className="">Explore</ButtonGray>
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@ export default function Hero() {
         </div>
         <div className="mt-8">
           <Image
-            src="/HeroBlocks.png"
+            src="/HeroBlocks.jpg"
             alt="Furniture collection"
             width={600}
             height={400}

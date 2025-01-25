@@ -10,18 +10,18 @@ export const useCart = () => {
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
- const addToCart = (product) => {
+ const addToCart = (product,localQuantity) => {
   setCartItems((prevItems) => {
     const existingItem = prevItems.find((item) => item.productname === product.productname);
 
     if (existingItem) {
       return prevItems.map((item) =>
         item.productname === product.productname
-          ? { ...item, quantity: item.quantity + 1 }
+          ? { ...item, quantity: item.quantity + localQuantity }
           : item
       );
     } else {
-      return [...prevItems, { ...product, quantity: 1 }];
+      return [...prevItems, { ...product, quantity: localQuantity }];
     }
   });
 };

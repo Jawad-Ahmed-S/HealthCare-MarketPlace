@@ -29,11 +29,7 @@ export default async function ProductListing({ params }: PageProps) {
       productname,
       price,
       description,
-      dimensions {
-        height,
-        width,
-        depth
-      },
+      packet_size,
       id
     }
   `);
@@ -55,7 +51,7 @@ export default async function ProductListing({ params }: PageProps) {
         productname={product.productname}
         Price={product.price}
         description={product.description}
-        Dimensions={product.dimensions}
+        packet_size={product.packet_size}
       />
       <h1 className="headline-three m-[5rem] text-custom-purple-dark">You May Also Like</h1>
       <ProductSlider />

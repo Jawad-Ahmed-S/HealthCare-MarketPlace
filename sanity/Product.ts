@@ -39,29 +39,9 @@ const ProductSchemas = {
       title: 'Description',
     },
      {
-      name: 'dimensions',
-      title: 'Dimensions',
-      type: 'object',
-   fields: [
-        {
-          name: 'height',
-          type: 'number',
-          title: 'Height',
-          validation: (Rule) => Rule.required().min(0),
-        },
-        {
-          name: 'width',
-          type: 'number',
-          title: 'Width',
-          validation: (Rule) => Rule.required().min(0),
-        },
-        {
-          name: 'depth',
-          type: 'number',
-          title: 'Depth',
-          validation: (Rule) => Rule.required().min(0),
-        },
-      ],
+      name: 'packet_size',
+      title: 'Packet Size',
+      type: 'string'
     },
     {
           name: 'id',
