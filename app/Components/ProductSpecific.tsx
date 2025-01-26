@@ -30,9 +30,7 @@ return(
         </p>
 
         <div>
-          <h2 className="  headline-four text-custom-purple-dark mb-2">
-            Dimensions
-          </h2>
+          
           <ul className="  list-none flex gap-[2rem] mt-[2rem] text-custom-purple-dark">
             <li className="  flex flex-col">
               <span className="  font-semibold">Packet Size</span> <span>{props.packet_size}</span>

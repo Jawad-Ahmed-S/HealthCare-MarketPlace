@@ -31,11 +31,7 @@ export default function CategoryListing({
           price,
           description,
           category,
-          dimensions {
-            height,
-            width,
-            depth
-          },
+          packet_size,
           id
         }
       `);

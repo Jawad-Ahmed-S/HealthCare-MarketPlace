@@ -2,7 +2,7 @@
 interface ProductSchemaType {
   poster: string;
   productname: string;
-  Price: number;
+  price: number;
   description: string;
   packet_size:string,
   id:number;

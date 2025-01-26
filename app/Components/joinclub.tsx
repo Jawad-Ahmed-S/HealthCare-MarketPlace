@@ -5,10 +5,9 @@ export default function JoinClub() {
   return (
     <section className="joinClub-bg w-full text-white flex justify-center mt-[5rem] items-center">
       <div className="flex flex-col items-center m-[3rem] text-center gap-4 justify-evenly">
-        <h1 className="headline-two">Join the club and get the benefits</h1>
+        <h1 className="headline-two">Stay Informed and Get the Benefits</h1>
         <p className="body-small">
-          Sign up for our newsletter and receive exclusive offers on new
-          <br /> ranges, sales, pop-up stores, and more
+          Sign up for our newsletter to receive exclusive updates on medical equipment, <br /> health services, special discounts, ambulance bookings, and more!
         </p>
         <div className="flex gap-5 mt-7 flex-col md:flex-row items-start md:items-center">
           <div className="flex  gap-2 items-center stroke-white">

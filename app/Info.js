@@ -3,18 +3,18 @@ import { RecycleIcon,DeliveryIcon,PriceCardIcon,QualityIcon } from "./Components
 export const serviceTilesData = [
   {
     Icon: DeliveryIcon,
-    title: "Next day as standard",
-    description: "Order before 3pm and get your order the next day as standard",
+    title: "Fast Delivery",
+    description: "Order by 3 PM for next-day delivery of essential medical products.",
   },
   {
     Icon: QualityIcon,
-    title: "Made by true artisans",
-    description: "Handmade crafted goods made with real passion and craftsmanship",
+    title: "Trusted Quality",
+    description: "High-quality healthcare solutions, made with expertise and care.",
   },
   {
     Icon: PriceCardIcon,
-    title: "Unbeatable prices",
-    description: "For our materials and quality, you won’t find better prices anywhere",
+    title: "24/7 Support",
+    description: "We're always here to assist you with your healthcare needs, day or night.",
   },
   {
     Icon: RecycleIcon,

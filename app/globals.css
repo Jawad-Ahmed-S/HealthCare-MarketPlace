@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,9 +21,8 @@
 }
 body {
   background-color: white;
-  
 }
-Link:hover{
+Link:hover {
   opacity: 0.8;
 }
 @layer utilities {
@@ -31,11 +30,11 @@ Link:hover{
     text-wrap: balance;
   }
 }
-.link-color{
+.link-color {
   @apply text-red-900;
 }
 .headline-one {
-  @apply text-[36px] leading-[150%] font-light ;
+  @apply text-[36px] leading-[150%] font-light;
 }
 
 .headline-two {
@@ -47,15 +46,18 @@ Link:hover{
 }
 
 .headline-four {
-  @apply text-[20px] leading-[150%] font-light ;
+  @apply text-[20px] leading-[150%] font-light;
 }
 
 .headline-five {
-  @apply text-[16px] leading-[150%] font-light ;
+  @apply text-[16px] leading-[150%] font-light;
+}
+.headline-five-bold {
+  @apply text-[16px] leading-[150%] font-bold;
 }
 
 .headline-six {
-  @apply text-[14px] leading-[150%] font-light ;
+  @apply text-[14px] leading-[150%] font-light;
 }
 
 .body-small {

@@ -14,9 +14,9 @@ export default function Header({ onSearch }: { onSearch?: (query: string) => voi
 
   const handleSearchClick = () => {
     if (onSearch) {
-      onSearch(search); // Run any additional search logic passed via props
+      onSearch(search); 
     }
-    router.push("/category/tables"); // Navigate to the desired route
+    router.push("/category/tables"); 
   };
 
   const navLinks = [
@@ -37,7 +37,7 @@ export default function Header({ onSearch }: { onSearch?: (query: string) => voi
 
   return (
     <div className="bg-white">
-      {/* Top Header Section */}
+      
       <div className="flex justify-between items-center px-4 lg:ml-8 lg:mr-8">
         <Link href="/">
           <h1 className="headline-two font-title text-custom-purple-dark mx-auto">Avion</h1>
@@ -53,7 +53,7 @@ export default function Header({ onSearch }: { onSearch?: (query: string) => voi
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search for products..."
-            className="search-bar pl-3"
+            className="search-bar pl-3 p-2 outline-none border-none focus:bg-custom-gray-medium"
           />
           <button onClick={handleSearchClick} className="hover:bg-custom-gray-medium p-2">
             <SearchIcon />
@@ -72,7 +72,7 @@ export default function Header({ onSearch }: { onSearch?: (query: string) => voi
 
       <hr />
 
-      {/* Mobile Menu */}
+      
       {menuOpen && (
         <div className="lg:hidden absolute left-0 w-full bg-white shadow-md z-10">
           <ul className="flex flex-col gap-4 p-4">

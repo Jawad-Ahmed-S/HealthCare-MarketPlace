@@ -11,15 +11,10 @@ const builder = imageUrlBuilder(client);
 function urlFor(source: any) {
   return builder.image(source);
 }
-// type CategoryListingProps = {
-//   searchQuery: string; // Accept the search query as a prop
-//   category: string; // Accept the category as a prop
-// };
+
 
 export default function ProductSlider() {
-  // const [productData, setProductData] = useState<Productinterface[]>([]);
-  // const [filteredProducts, setFilteredProducts] = useState<Productinterface[]>([]);
-{
+  {
   const [productData, setProductData] = useState<Productinterface[]>([]);
 
   useEffect(() => {
@@ -30,18 +25,14 @@ export default function ProductSlider() {
           productname,
           price,
           description,
-          dimensions {
-            height,
-            width,
-            depth
-          },
+          packet_size,
           id
         }
       `);
       setProductData(data);
 
-      // Log the IDs after fetching
-      // console.log("Fetched Product IDs:", data.map((item: any) => item.id));
+      
+      
       console.log(data)
     };
     fetchData();
@@ -51,20 +42,19 @@ export default function ProductSlider() {
       <div className="w-full flex flex-col justify-center items-center">
         <div className="flex flex-col gap-4 w-full justify-evenly md:flex-row md:items-center overflow-x-auto">
           {productData.map((tile, index) => {
-            // Log each product ID during rendering
-            // console.log("Rendering Product ID:", tile.id);
+              
             return (
               <ProductCard
                 key={tile.id}
                 imagePath={urlFor(tile.poster).url()}
                 title={tile.productname}
-                price={tile.Price}
+                price={tile.price}
                 id={tile.id}
               />
             );
           })}
         </div>
-        {/* <Link href="/AllProduct"><ButtonGray className="m-auto">View More</ButtonGray></Link> */}
+        <Link href="/AllProduct"><ButtonGray className="m-auto">View More</ButtonGray></Link>
       </div>
     </section>
   );
