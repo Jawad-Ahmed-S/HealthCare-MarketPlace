@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-8">
 
         <div className="flex justify-between items-start md:space-y-8 lg:space-y-0 flex-wrap">
-          {/* Menu Section */}
+          
           <div>
             <h2 className="mb-4 font-medium headline-five">Menu</h2>
             <ul className="space-y-2">
@@ -28,29 +28,32 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Categories Section */}
+          
           <div>
             <h2 className="mb-4 font-medium headline-five">Categories</h2>
             <ul className="space-y-2">
               <li className="body-small">
-                <Link className="hover:text-custom-gray" href="/AllProduct">Crockery</Link>
+                <Link className="hover:text-custom-gray" href="/category/Tablets">Tablets</Link>
               </li>
               <li className="body-small">
-                <Link className="hover:text-custom-gray" href="/AllProduct">Furniture</Link>
+                <Link className="hover:text-custom-gray" href="/category/Syrups">Syrups</Link>
               </li>
               <li className="body-small">
-                <Link className="hover:text-custom-gray" href="/AllProduct">Homeware</Link>
+                <Link className="hover:text-custom-gray" href="/category/Injections">Injections</Link>
               </li>
               <li className="body-small">
-                <Link className="hover:text-custom-gray" href="/AllProduct-pots">Plant pots</Link>
+                <Link className="hover:text-custom-gray" href="/category/Equipments">Equipment</Link>
               </li>
               <li className="body-small">
-                <Link className="hover:text-custom-gray" href="/AllProduct">Chairs</Link>
+                <Link className="hover:text-custom-gray" href="/category/Kits">Kits</Link>
+              </li>
+              <li className="body-small">
+                <Link className="hover:text-custom-gray" href="/category/Ambulance">Ambulance</Link>
               </li>
             </ul>
           </div>
 
-          {/* Our Company Section */}
+          
           <div>
             <h2 className="mb-4 font-medium headline-five">Our company</h2>
             <ul className="space-y-2">
@@ -72,7 +75,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Mailing List Section */}
+          
           <div className="w-full lg:w-auto">
             <h2 className="mb-4 mt-4 font-medium headline-five">Join our mailing list</h2>
             <form className="flex">
@@ -86,10 +89,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Footer Bottom */}
+        
         <div className="mt-8 flex justify-between items-center border-t border-white pt-4">
           <p className="body-small text-gray-400">
-            &copy; Copyright 2022 Avion LTD
+            &copy; Copyright 2025 Avion LTD
           </p>
           <div className="flex flex-col md:flex-row md:space-x-4">
             <a href="https://linkedin.com" className="body-small">LinkedIn</a>

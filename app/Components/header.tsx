@@ -13,17 +13,17 @@ export default function Header({ onSearch }: { onSearch?: (query: string) => voi
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const handleSearchClick = () => {
+    router.push("/category/Tablets"); 
     if (onSearch) {
       onSearch(search); 
     }
-    router.push("/category/tables"); 
   };
 
   const navLinks = [
     { href: "/category/Tablets", label: "Tablets" },
     { href: "/category/Syrups", label: "Syrups" },
     { href: "/category/Injections", label: "Injections" },
-    { href: "/category/Equipment", label: "Equipment" },
+    { href: "/category/Equipment", label: "Equipment"},
     { href: "/category/Kits", label: "Kits" },
     { href: "/category/Ambulance", label: "Ambulance" },
   ];
