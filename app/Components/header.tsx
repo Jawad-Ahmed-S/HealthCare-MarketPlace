@@ -13,17 +13,18 @@ export default function Header({ onSearch }: { onSearch?: (query: string) => voi
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const handleSearchClick = () => {
-    router.push("/category/Tablets"); 
-    if (onSearch) {
+    
+    router.push("/category/Syrups"); 
+    if(onSearch)
       onSearch(search); 
-    }
+    
   };
 
   const navLinks = [
     { href: "/category/Tablets", label: "Tablets" },
     { href: "/category/Syrups", label: "Syrups" },
     { href: "/category/Injections", label: "Injections" },
-    { href: "/category/Equipment", label: "Equipment"},
+    { href: "/category/Equipment", label: "Equipment" },
     { href: "/category/Kits", label: "Kits" },
     { href: "/category/Ambulance", label: "Ambulance" },
   ];
@@ -105,7 +106,7 @@ export default function Header({ onSearch }: { onSearch?: (query: string) => voi
         </div>
       )}
 
-      {/* Desktop Navigation */}
+      
       <div className="hidden lg:flex justify-center items-center h-[3rem]">
         <div className="flex justify-between gap-8 headline-six text-custom-purple-dark">
           {renderLinks()}

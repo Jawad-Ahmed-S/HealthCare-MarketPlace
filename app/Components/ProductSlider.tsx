@@ -38,9 +38,9 @@ export default function ProductSlider() {
     fetchData();
   }, []);
   return (
-    <section className="max-w-[1440px] flex justify-center items-center mt-[5rem] mb-[5rem] px-4 overflow-x-hidden">
-      <div className="w-full flex flex-col justify-center items-center">
-        <div className="flex flex-col gap-4 w-full justify-evenly md:flex-row md:items-center overflow-x-auto">
+    <section className="max-w-[1440px] flex justify-center items-center mt-[5rem] mb-[5rem] px-4 py-4 overflow-x-hidden">
+      <div className="w-full flex flex-col  justify-center items-center">
+        <div className="flex flex-col gap-4 w-full justify-evenly py-4 mt-2 mb-2 md:flex-row md:items-center overflow-x-auto">
           {productData.map((tile, index) => {
               
             return (

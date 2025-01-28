@@ -13,9 +13,9 @@ export default function ProductCard({ imagePath, title, price, id }: ProductCard
   }
 
   return (
-    <Link className="h-[70vh]" href={`/${id}` || '#'}>
+    <Link className="h-[65vh] rounded-sm overflow-hidden shadow-md hover:shadow-lg" href={`/${id}` || '#'}>
       <div className="bg-white relative md:w-[17rem]  h-[50vh] w-[100%]">
-       <div className="realtive h-[50vh] w-[100%]">
+       <div className="realtive h-[50vh]  w-[100%]">
        <Image
         src={imagePath}
         alt={title}
@@ -23,7 +23,7 @@ export default function ProductCard({ imagePath, title, price, id }: ProductCard
         objectFit="cover" 
         />
         </div>
-      <div className="pt-4 pb-4">
+      <div className="pt-4 pb-1 m-2">
           <h2 className="text-custom-purple-dark  headline-five mb-[1px]">{title}</h2>
           <p className="text-custom-purple-dark headline-five-bold">£{price}</p>
         </div>

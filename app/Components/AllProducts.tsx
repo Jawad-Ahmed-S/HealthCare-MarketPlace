@@ -49,7 +49,7 @@ export default function CategoryListing({
   }, [Category]);
 
   useEffect(() => {
-    // Apply search filter on product name and description
+    
     if (searchQuery) {
       const filtered = productData.filter(
         (product: any) =>
@@ -58,7 +58,7 @@ export default function CategoryListing({
       );
       setFilteredProducts(filtered);
     } else {
-      // Reset to category filter if search query is empty
+     
       const filtered = productData.filter(
         (product: any) =>
           product.category?.toLowerCase() === Category.toLowerCase()
