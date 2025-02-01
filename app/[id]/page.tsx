@@ -34,11 +34,9 @@ export default async function ProductListing({ params }: PageProps) {
     }
   `);
 
-  // Extract the first product from the array
   const product = res[0];
 
   if (!product) {
-    // Handle the case where no product is found
     return <div>Product not found.</div>;
   }
 

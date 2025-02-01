@@ -4,10 +4,19 @@ import ProductSchemaType from "./Productinterface";
 
 import { useCart } from "../CartContext";
 import { useState } from "react";
+import Swal from "sweetalert2";
+
+
 export default function ProductSpecific(props:ProductSchemaType){
    const {addToCart} = useCart(); 
   const [localQuantity,setlocalQuantity]=useState(1)
   const handleAddToCart = () => {
+    
+      Swal.fire({
+    title: "Good job!",
+    text: "Added to Cart!",
+    icon: "success"
+  });
     addToCart(props,localQuantity); 
   };
 

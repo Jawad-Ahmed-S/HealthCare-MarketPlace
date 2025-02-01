@@ -26,7 +26,7 @@ export default function Header({ onSearch }: { onSearch?: (query: string) => voi
     { href: "/category/Injections", label: "Injections" },
     { href: "/category/Equipment", label: "Equipment" },
     { href: "/category/Kits", label: "Kits" },
-    { href: "/category/Ambulance", label: "Ambulance" },
+    { href: "/Ambulance", label: "Ambulance" },
   ];
 
   const renderLinks = (additionalClasses = "") =>
@@ -61,6 +61,9 @@ export default function Header({ onSearch }: { onSearch?: (query: string) => voi
           </button>
           <Link href="/About" className="hover:bg-custom-gray-medium p-2">
             Admin
+          </Link>
+          <Link href="/Login" className="hover:bg-custom-gray-medium p-2">
+            Login
           </Link>
           <Link href="/About" className="hover:bg-custom-gray-medium p-2">
             <UserIcon />

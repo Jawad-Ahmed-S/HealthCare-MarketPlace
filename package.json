@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "next lint",
-  "import-data": "node scripts/importSanityData.mjs"
-},
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "import-data": "node scripts/importSanityData.mjs"
+  },
   "dependencies": {
     "@next/font": "^14.2.15",
     "@sanity/client": "^6.24.3",
@@ -18,10 +18,12 @@
     "dotenv": "^16.4.7",
     "next": "14.2.2",
     "next-sanity": "^9.8.31",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "sanity": "^3.68.3",
-    "styled-components": "^6.1.13"
+    "styled-components": "^6.1.13",
+    "sweetalert2": "^11.15.10",
+    "zort": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
