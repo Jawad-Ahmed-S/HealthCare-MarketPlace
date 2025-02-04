@@ -1,5 +1,5 @@
-const ProductSchemas = {
-  name: 'Product',
+export default{
+  name: 'product',
   type: 'document',
   title: 'Product',
   fields: [
@@ -51,5 +51,3 @@ const ProductSchemas = {
     }
   ],
 };
-
-export default ProductSchemas;

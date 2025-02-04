@@ -33,7 +33,7 @@ return(
 
       <div className="  flex-1 flex flex-col gap-6">
         <h1 className="  headline-two text-custom-purple-dark">{props.productname}</h1>
-        <p className="  headline-three font-semibold text-custom-purple-dark">£{props.Price}</p>
+        <p className="  headline-three font-semibold text-custom-purple-dark">£{props.price}</p>
         <p className="  body-medium text-custom-purple-dark">
           {props.description}
         </p>

@@ -47,7 +47,7 @@ export default async function ProductListing({ params }: PageProps) {
         id={product.id}
         poster={urlFor(product.poster).url()}
         productname={product.productname}
-        Price={product.price}
+        price={product.price}
         description={product.description}
         packet_size={product.packet_size}
       />

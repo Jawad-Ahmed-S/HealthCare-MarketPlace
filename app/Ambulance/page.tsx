@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../Components/header";
 import Footer from "../Components/footer";
+import Swal from "sweetalert2";
 
 export default function AmbulanceBookingForm() {
   const [formData, setFormData] = useState({
@@ -18,6 +19,14 @@ export default function AmbulanceBookingForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
+
+  function Booked(successMessage: string) {
+    Swal.fire({
+      title: successMessage,
+      icon: "success",
+      draggable: true,
+    });
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -44,17 +53,24 @@ export default function AmbulanceBookingForm() {
     }, 2000);
   };
 
+  useEffect(() => {
+    if (successMessage) {
+      Booked(successMessage);
+      setSuccessMessage("");
+    }
+  }, [successMessage]);
+
   return (
     <>
       <Header />
       <h1 className="headline-three flex justify-center text-custom-purple-dark capitalize mt-6">
         Ambulance Booking
       </h1>
-      <div className="flex  w-full justify-center mt-6 p-6">
-        <div className="p-8 w-full flex    bg-white rounded-lg shadow-md">
-          <form onSubmit={handleSubmit} className="flex flex-col  w-full md:flex-row  gap-6">
+      <div className="flex w-full justify-center mt-6 p-6">
+        <div className="p-8 w-full flex bg-white rounded-lg shadow-md">
+          <form onSubmit={handleSubmit} className="flex flex-col w-full md:flex-row gap-6">
             {/* Left Column */}
-            <div className="w-full md:w-1/2 flex   flex-col gap-6">
+            <div className="w-full md:w-1/2 flex flex-col gap-6">
               <div>
                 <label htmlFor="name" className="block text-lg font-medium text-custom-purple-dark mb-2">
                   Full Name
@@ -117,8 +133,8 @@ export default function AmbulanceBookingForm() {
                 ></textarea>
               </div>
             </div>
-                    <div className="border border-custom-purple-dark h-full"></div>
-            <div className="w-full md:w-1/2 flex  flex-col gap-6">
+            <div className="border border-custom-purple-dark h-full"></div>
+            <div className="w-full md:w-1/2 flex flex-col gap-6">
               <div>
                 <h2 className="text-lg font-medium text-custom-purple-dark mb-2">Ambulance Type</h2>
                 <div className="flex gap-4">
@@ -225,20 +241,15 @@ export default function AmbulanceBookingForm() {
                   </label>
                 </div>
               </div>
-            <div className=" w-full">
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="bg-custom-purple-dark text-white py-3 px-6 rounded-md hover:bg-custom-purple-light disabled:bg-gray-400 w-full"
-              >
-                {isSubmitting ? "Submitting..." : "Book Ambulance"}
-              </button>
-            {successMessage && (
-              <p className="mt-4 text-green-600 font-medium text-center">{successMessage}</p>
-            )}
-
-
-            </div>
+              <div className="w-full">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="bg-custom-purple-dark text-white py-3 px-6 rounded-md hover:bg-custom-purple-light disabled:bg-gray-400 w-full"
+                >
+                  {isSubmitting ? "Submitting..." : "Book Ambulance"}
+                </button>
+              </div>
             </div>
           </form>
         </div>

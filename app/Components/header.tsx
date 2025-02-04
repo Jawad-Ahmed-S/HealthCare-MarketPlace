@@ -62,7 +62,7 @@ export default function Header({ onSearch }: { onSearch?: (query: string) => voi
           <Link href="/About" className="hover:bg-custom-gray-medium p-2">
             Admin
           </Link>
-          <Link href="/Login" className="hover:bg-custom-gray-medium p-2">
+          <Link href="/login" className="hover:bg-custom-gray-medium p-2">
             Login
           </Link>
           <Link href="/About" className="hover:bg-custom-gray-medium p-2">
