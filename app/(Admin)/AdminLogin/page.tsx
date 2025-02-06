@@ -25,7 +25,7 @@ export default function AdminForm() {
                 text: "Admin Logged in!",
                 icon: "success",
               });
-              router.push("/AdminDashboard"); 
+              router.push("/Orders"); 
 
         } else {
             Swal.fire({
