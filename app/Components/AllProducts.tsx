@@ -71,7 +71,7 @@ export default function CategoryListing({
     <div className="bg-white h-full m-auto">
       <section className="flex flex-col gap-5 justify-center items-center">
         <h1 className="headline-three text-custom-purple-dark capitalize mt-6">
-          {Category.replace("-", " ")}
+          {searchQuery.replace("-", " ")}
         </h1>
         <div className="grid grid-cols-1 gap-6 w-[90%] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {filteredProducts.length > 0 ? (

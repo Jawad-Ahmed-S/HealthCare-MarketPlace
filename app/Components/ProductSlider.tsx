@@ -50,6 +50,7 @@ export default function ProductSlider() {
                 title={tile.productname}
                 price={tile.price}
                 ProductId={tile.ProductId}
+                _id={tile._id}
               />
             );
           })}

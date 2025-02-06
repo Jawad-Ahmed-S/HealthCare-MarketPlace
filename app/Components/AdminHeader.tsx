@@ -19,16 +19,16 @@ export default function AdminHeader(){
         
         
           {!menuOpen &&( <div className="w-1/4 lg:flex justify-evenly hidden">
-          <Link href="/About" className="hover:bg-custom-gray-medium p-2">
+          <Link href="/Orders" className="hover:bg-custom-gray-medium p-2">
             
             Orders
           </Link>
-          <Link href="/Cart" className="hover:bg-custom-gray-medium p-2">
+          <Link href="/Inventory" className="hover:bg-custom-gray-medium p-2">
             
             Inventory
           </Link>
          
-          <Link href="/Cart" className="hover:bg-custom-gray-medium p-2">
+          <Link href="/Stats" className="hover:bg-custom-gray-medium p-2">
             
             Stats
           </Link>
@@ -49,10 +49,10 @@ export default function AdminHeader(){
               <Link href="/Orders" className="hover:bg-custom-gray-medium p-2">
                 Orders
               </Link>
-              <Link href="/About" className="hover:bg-custom-gray-medium p-2">
+              <Link href="/Inventory" className="hover:bg-custom-gray-medium p-2">
                 Inventory
               </Link>
-               <Link href="/About" className="hover:bg-custom-gray-medium p-2">
+               <Link href="/Stats" className="hover:bg-custom-gray-medium p-2">
                 Stats
               </Link>
             </li>
