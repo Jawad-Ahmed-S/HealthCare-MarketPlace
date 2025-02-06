@@ -14,8 +14,8 @@ export default function Header({ onSearch }: { onSearch?: (query: string) => voi
 
   const handleSearchClick = () => {
     
-    router.push("/category/Syrups"); 
     if(onSearch)
+      router.push("/category/Syrups"); 
       onSearch(search); 
     
   };
@@ -59,7 +59,7 @@ export default function Header({ onSearch }: { onSearch?: (query: string) => voi
           <button onClick={handleSearchClick} className="hover:bg-custom-gray-medium p-2">
             <SearchIcon />
           </button>
-          <Link href="/About" className="hover:bg-custom-gray-medium p-2">
+          <Link href="/AdminLogin" className="hover:bg-custom-gray-medium p-2">
             Admin
           </Link>
           <Link href="/login" className="hover:bg-custom-gray-medium p-2">

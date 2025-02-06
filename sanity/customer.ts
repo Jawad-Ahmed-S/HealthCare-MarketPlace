@@ -48,7 +48,21 @@ export default {
         name:'cartItems',
         title:'Cart Items',
         type: 'array',
-        of :[{type:'reference', to :{type :'product'}}]
+        of :[{type:'reference', to :{type :'Product'}}]
+    },
+    {
+        
+        name:'total',
+        title:'Total',
+        type: 'number',
+
+    },
+    {
+        // orderDate
+        name:'orderDate',
+        title:'Order Date',
+        type: 'date',
+
     },
     {
         name: 'status',
@@ -62,7 +76,7 @@ export default {
             ],
             layout:'radio'
         },
-        initialValue :'pending',
+        defaultValue :'pending',
     }
   ],
 };

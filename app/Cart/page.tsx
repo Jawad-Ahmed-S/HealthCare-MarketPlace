@@ -46,9 +46,9 @@ const Cart = () => {
     COD: billingData.COD,
      cartItems: cartItems.map((item) => {
       // console.log("Processing item:", item);
-      console.log("Processing item:", item.id);
+      console.log("Processing item:", item._id);
       return {
-        _ref: item.id, 
+        _ref: item._id, 
         _type: 'reference',
       };
     }),

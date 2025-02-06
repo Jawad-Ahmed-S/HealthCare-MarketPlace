@@ -5,6 +5,7 @@ interface ProductSchemaType {
   price: number;
   description: string;
   packet_size:string,
-  id:number;
+  ProductId:number;
+  _id:string;
 }
 export default ProductSchemaType;

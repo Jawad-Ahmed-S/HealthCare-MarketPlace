@@ -15,22 +15,23 @@ function urlFor(source: any) {
   return builder.image(source);
 }
 
-type Params = { id: string };
+type Params = { ProductId: string };
 type PageProps = {
   params: Params;
 };
 export default async function ProductListing({ params }: PageProps) {
-  const prodIndex = params.id;
+  const prodIndex = params.ProductId;
 
   // Fetch the product data from Sanity
   const res = await client.fetch(`
-    *[_type == "Product" && id == "${prodIndex}"] {
+    *[_type == "Product" && ProductId == "${prodIndex}"] {
       poster,
       productname,
       price,
       description,
       packet_size,
-      id
+      ProductId,
+      _id,
     }
   `);
 
@@ -44,12 +45,13 @@ export default async function ProductListing({ params }: PageProps) {
     <div className="bg-white h-full max-w-[1440px] sm:-w-[400px] m-auto">
       <Header />
       <ProductSpecific
-        id={product.id}
+        ProductId={product.ProductId}
         poster={urlFor(product.poster).url()}
         productname={product.productname}
         price={product.price}
         description={product.description}
         packet_size={product.packet_size}
+        _id={product._id}
       />
       <h1 className="headline-three m-[5rem] text-custom-purple-dark">You May Also Like</h1>
       <ProductSlider />

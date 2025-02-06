@@ -32,7 +32,7 @@ export default function CategoryListing({
           description,
           category,
           packet_size,
-          id
+          ProductId
         }
       `);
       setProductData(data);
@@ -77,11 +77,12 @@ export default function CategoryListing({
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product: any) => (
               <ProductCard
-                key={product.id}
+                key={product.ProductId}
                 imagePath={urlFor(product.poster).url()}
                 title={product.productname}
                 price={product.price}
-                id={product.id}
+                ProductId={product.ProductId}
+                _id={product._id}
               />
             ))
           ) : (

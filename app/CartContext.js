@@ -1,8 +1,14 @@
 "use client";
 import React, { createContext, useContext, useState } from "react";
 
+// interface ProductDetails{
+//   productname: string;
+//   price: number;
+//   quantity: number;
+//   _id:String;
+//   poster: string;
+// }
 const CartContext = createContext();
-
 export const useCart = () => {
   return useContext(CartContext);
 };

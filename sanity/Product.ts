@@ -1,5 +1,5 @@
 export default{
-  name: 'product',
+  name: 'Product',
   type: 'document',
   title: 'Product',
   fields: [
@@ -44,9 +44,9 @@ export default{
       type: 'string'
     },
     {
-          name: 'id',
+          name: 'ProductId',
           type: 'number',
-          title: 'ID',
+          title: 'Product ID',
           validation: (Rule) => Rule.required()
     }
   ],

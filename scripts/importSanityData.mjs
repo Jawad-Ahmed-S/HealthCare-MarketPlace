@@ -67,7 +67,7 @@ async function importData() {
             }
           : undefined,
         packet_size:product.packet_size,
-        id:product.id
+        ProductId:product.ProductId
       }
 
       console.log('Uploading product to Sanity:', sanityProduct.productname)

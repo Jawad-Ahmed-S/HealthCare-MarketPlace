@@ -26,7 +26,7 @@ export default function ProductSlider() {
           price,
           description,
           packet_size,
-          id
+          ProductId
         }
       `);
       setProductData(data);
@@ -45,11 +45,11 @@ export default function ProductSlider() {
               
             return (
               <ProductCard
-                key={tile.id}
+                key={tile.ProductId}
                 imagePath={urlFor(tile.poster).url()}
                 title={tile.productname}
                 price={tile.price}
-                id={tile.id}
+                ProductId={tile.ProductId}
               />
             );
           })}
