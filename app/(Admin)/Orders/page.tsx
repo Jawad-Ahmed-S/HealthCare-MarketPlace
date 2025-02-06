@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
 import deleteAllDocuments from "../../Components/deleteSanityData.mjs"
 import imageUrlBuilder from "@sanity/image-url";
+import Image from 'next/image';
 
 const builder = imageUrlBuilder(client);
 interface Customer {
@@ -80,8 +81,13 @@ function urlFor(source: any) {
               <div className="flex flex-wrap gap-2">
                 {order.cartItems.map((item, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <p className="text-sm">{item.productname}</p>
-                    <img src={urlFor(item.poster).url()} alt={item.productname} className="w-10 h-10" />
+                    <p className="text-sm">{item.productname}</p><Image 
+  src={urlFor(item.poster).url()} 
+  alt={item.productname} 
+  className="w-10 h-10" 
+  width={40} 
+  height={40}
+/>
                   </div>
                 ))}
               </div>
