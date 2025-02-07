@@ -7,11 +7,11 @@ import { useCart } from "../CartContext";
 import { client } from "@/sanity/lib/client";
 import Swal from "sweetalert2";
 const Cart = () => {
-  const { cartItems } = useCart();
+  const { cartItems,quantity,setQuantity } = useCart();
   const [showForm, setShowForm] = useState(false); 
-  const [CartQuantity,setCartQuantity]= useState(1)
+  // const [CartQuantity,setCartQuantity]= useState(1)
   const subtotal = Array.isArray(cartItems)
-  ? cartItems.reduce((total: number, item) => total + (item.price * CartQuantity), 0)
+  ? cartItems.reduce((total: number, item) => total + (item.price * quantity), 0)
   : 0;
   
   const [billingData, setBillingData] = useState({
@@ -119,13 +119,13 @@ const Cart = () => {
                 </div>
 
                 <div className="col-span-3 flex justify-center items-center gap-2">
-                  <button className="w-8 h-8 border border-gray-300" onClick={()=>{setCartQuantity((CartQuantity>1)?CartQuantity-1:CartQuantity)}}>-</button>
-                  <span>{CartQuantity}</span>
-                  <button className="w-8 h-8 border border-gray-300" onClick={()=>{setCartQuantity(CartQuantity+1)}}>+</button>
+                  <button className="w-8 h-8 border border-gray-300" onClick={()=>{setQuantity((quantity>1)?quantity-1:quantity)}}>-</button>
+                  <span>{quantity}</span>
+                  <button className="w-8 h-8 border border-gray-300" onClick={()=>{setQuantity(quantity+1)}}>+</button>
                 </div>
 
                 <div className="col-span-3 text-right font-semibold">
-                  £{item.price * (CartQuantity || 1)}
+                  £{item.price * (quantity || 1)}
                 </div>
               </div>
             ))
