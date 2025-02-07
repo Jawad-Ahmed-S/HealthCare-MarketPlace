@@ -20,7 +20,6 @@ export const CartProvider = ({ children }) => {
           item.productname === product.productname
             ? { ...item, quantity: item.quantity + quantity } // Adds new quantity to the existing one
             : item,
-            // setQuantity(()=>{item.quantity+quantity})  
         );
       } else {
         return [...prevItems, { ...product, quantity }];
